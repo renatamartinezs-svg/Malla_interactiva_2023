@@ -19,7 +19,7 @@
             <div class="ramo disponible" id="quimica" onclick="aprobar('quimica', ['biogeoquimica'])">Química <br><small>6 SCT</small></div>
             <div class="ramo disponible" id="diversidad" onclick="aprobar('diversidad', ['ecologia'])">Diversidad biológica <br><small>5 SCT</small></div>
             <div class="ramo disponible" id="clinica1" onclick="aprobar('clinica1', ['clinica1a'])">Clínica Vinculación a la acción prof. <br><small>5 SCT</small></div>
-            <div class="ramo disponible" id="taller-com">Taller de com. oral y escrita <br><small>2 SCT</small></div>
+            <div class="ramo disponible" id="taller-com" onclick="aprobar('taller-com', [])">Taller de com. oral y escrita <br><small>2 SCT</small></div>
         </div>
 
         <!-- SEMESTRE II -->
@@ -29,15 +29,15 @@
             <div class="ramo bloqueado" id="mate2" data-req="mate1" onclick="aprobar('mate2', ['mate3', 'estadistica1'])">Matemáticas II <br><small>5 SCT</small></div>
             <div class="ramo bloqueado" id="fisica" data-req="mate1" onclick="aprobar('fisica', ['fisica-ap', 'edafologia'])">Física <br><small>5 SCT</small></div>
             <div class="ramo bloqueado" id="biogeoquimica" data-req="quimica" onclick="aprobar('biogeoquimica', ['ecologia', 'quimica-amb'])">Biogeoquímica <br><small>5 SCT</small></div>
-            <div class="ramo disponible" id="ecofisiologia">Ecofisiología <br><small>5 SCT</small></div>
+            <div class="ramo disponible" id="ecofisiologia" onclick="aprobar('ecofisiologia', [])">Ecofisiología <br><small>5 SCT</small></div>
             <div class="ramo bloqueado" id="clinica1a" data-req="clinica1" onclick="aprobar('clinica1a', ['clinica1b'])">Clínica 1A: Bases diagnóstico <br><small>5 SCT</small></div>
-            <div class="ramo disponible" id="libre">Libre <br><small>2 SCT</small></div>
+            <div class="ramo disponible" id="libre" onclick="aprobar('libre', [])">Libre <br><small>2 SCT</small></div>
         </div>
 
         <!-- SEMESTRE III -->
         <div class="semestre">
             <h3>Semestre III</h3>
-            <div class="ramo bloqueado" id="sistema-cultural" data-req="medio-social">Comprensión sistema cultural <br><small>4 SCT</small></div>
+            <div class="ramo bloqueado" id="sistema-cultural" data-req="medio-social" onclick="aprobar('sistema-cultural', [])">Comprensión sistema cultural <br><small>4 SCT</small></div>
             <div class="ramo bloqueado" id="mate3" data-req="mate2" onclick="aprobar('mate3', ['fisica-ap'])">Matemáticas III <br><small>5 SCT</small></div>
             <div class="ramo bloqueado" id="ecologia" data-req="diversidad,biogeoquimica" onclick="aprobar('ecologia', ['medio-amb'])">Ecología <br><small>4 SCT</small></div>
             <div class="ramo bloqueado" id="estadistica1" data-req="mate2" onclick="aprobar('estadistica1', ['estadistica2', 'geoinformatica'])">Estadística I <br><small>5 SCT</small></div>
@@ -53,7 +53,7 @@
             <div class="ramo bloqueado" id="fisica-ap" data-req="fisica,mate3" onclick="aprobar('fisica-ap', ['percepcion', 'modelacion', 'energias'])">Física aplicada <br><small>5 SCT</small></div>
             <div class="ramo bloqueado" id="estadistica2" data-req="estadistica1" onclick="aprobar('estadistica2', ['modelacion'])">Estadística II <br><small>4 SCT</small></div>
             <div class="ramo bloqueado" id="geoinformatica" data-req="estadistica1,inf-ambiental" onclick="aprobar('geoinformatica', ['percepcion', 'modelacion', 'agua'])">Geoinformática <br><small>5 SCT</small></div>
-            <div class="ramo bloqueado" id="edafologia" data-req="fisica">Edafología <br><small>4 SCT</small></div>
+            <div class="ramo bloqueado" id="edafologia" data-req="fisica" onclick="aprobar('edafologia', [])">Edafología <br><small>4 SCT</small></div>
             <div class="ramo bloqueado" id="clinica1c" data-req="clinica1b" onclick="aprobar('clinica1c', ['clinica1d'])">Clínica 1C: Planif. diagnóstico <br><small>5 SCT</small></div>
             <div class="ramo bloqueado" id="ingles2" data-req="ingles1" onclick="aprobar('ingles2', ['ingles3'])">Inglés II <br><small>3 SCT</small></div>
         </div>
@@ -61,11 +61,12 @@
         <!-- SEMESTRE V -->
         <div class="semestre">
             <h3>Semestre V</h3>
-            <div class="ramo bloqueado" id="eco-politica" data-req="economia">Economía política <br><small>4 SCT</small></div>
-            <div class="ramo bloqueado" id="percepcion" data-req="fisica-ap,geoinformatica">Percepción remota <br><small>5 SCT</small></div>
-            <div class="ramo bloqueado" id="modelacion" data-req="fisica-ap,estadistica2,geoinformatica">Modelación ambiental <br><small>5 SCT</small></div>
-            <div class="ramo bloqueado" id="quimica-amb" data-req="biogeoquimica">Química ambiental <br><small>4 SCT</small></div>
-            <div class="ramo bloqueado" id="medio-amb" data-req="ecologia" onclick="aprobar('medio-amb', ['cambio-global', 'planificacion'])">Comprensión medio amb. <br><small>4 SCT</small></div>
+            <div class="ramo bloqueado" id="eco-politica" data-req="economia" onclick="aprobar('eco-politica', [])">Economía política <br><small>4 SCT</small></div>
+            <div class="ramo bloqueado" id="percepcion" data-req="fisica-ap,geoinformatica" onclick="aprobar('percepcion', [])">Percepción remota <br><small>5 SCT</small></div>
+            <div class="ramo bloqueado" id="modelacion" data-req="fisica-ap,estadistica2,geoinformatica" onclick="aprobar('modelacion', [])">Modelación ambiental <br><small>5 SCT</small></div>
+            <div class="ramo bloqueado" id="quimica-amb" data-req="biogeoquimica" onclick="aprobar('quimica-amb', [])">Química ambiental <br><small>4 SCT</small></div>
+            <!-- AQUÍ SE CORRIGIÓ: Ahora le avisa a cambio-global, planificacion Y ALSO a socioecologicos -->
+            <div class="ramo bloqueado" id="medio-amb" data-req="ecologia" onclick="aprobar('medio-amb', ['cambio-global', 'planificacion', 'socioecologicos'])">Comprensión medio amb. <br><small>4 SCT</small></div>
             <div class="ramo bloqueado" id="clinica1d" data-req="clinica1c" onclick="aprobar('clinica1d', ['clinica2a'])">Clínica 1D: Planif. estrategia <br><small>5 SCT</small></div>
             <div class="ramo bloqueado" id="ingles3" data-req="ingles2" onclick="aprobar('ingles3', ['ingles4'])">Inglés III <br><small>3 SCT</small></div>
         </div>
@@ -76,22 +77,22 @@
             <div class="ramo bloqueado" id="agua" data-req="geoinformatica" onclick="aprobar('agua', ['recursos-nat'])">Gestión del agua <br><small>5 SCT</small></div>
             <div class="ramo disponible" id="politicas-leg" onclick="aprobar('politicas-leg', ['gestion-pub'])">Políticas y leg. ambiental <br><small>4 SCT</small></div>
             <div class="ramo bloqueado" id="cambio-global" data-req="medio-amb" onclick="aprobar('cambio-global', ['recursos-nat', 'gestion-pub'])">Cambio global <br><small>4 SCT</small></div>
-            <div class="ramo bloqueado" id="socioecologicos" data-req="medio-amb">Sistemas socioecológicos <br><small>4 SCT</small></div>
+            <div class="ramo bloqueado" id="socioecologicos" data-req="medio-amb" onclick="aprobar('socioecologicos', [])">Sistemas socioecológicos <br><small>4 SCT</small></div>
             <div class="ramo bloqueado" id="planificacion" data-req="medio-amb" onclick="aprobar('planificacion', ['gestion-pub'])">Planif. y ord. territorial <br><small>5 SCT</small></div>
             <div class="ramo bloqueado" id="clinica2a" data-req="clinica1d" onclick="aprobar('clinica2a', ['clinica2b'])">Clínica 2A: Intervención diag. <br><small>5 SCT</small></div>
-            <div class="ramo bloqueado" id="ingles4" data-req="ingles3">Inglés IV <br><small>3 SCT</small></div>
+            <div class="ramo bloqueado" id="ingles4" data-req="ingles3" onclick="aprobar('ingles4', [])">Inglés IV <br><small>3 SCT</small></div>
         </div>
 
         <!-- SEMESTRE VII -->
         <div class="semestre">
             <h3>Semestre VII</h3>
-            <div class="ramo bloqueado" id="energias" data-req="fisica-ap">Energías <br><small>4 SCT</small></div>
-            <div class="ramo bloqueado" id="recursos-nat" data-req="agua,cambio-global">Manejo recursos nat. <br><small>5 SCT</small></div>
-            <div class="ramo bloqueado" id="proyectos" data-req="economia">Formulación de proyectos <br><small>4 SCT</small></div>
-            <div class="ramo bloqueado" id="gestion-pub" data-req="politicas-leg,cambio-global,planificacion">Gestión pública y privada <br><small>5 SCT</small></div>
-            <div class="ramo bloqueado" id="clinica2b" data-req="clinica2a">Clínica 2B: Intervención plan <br><small>5 SCT</small></div>
-            <div class="ramo disponible" id="cfg">CFG <br><small>2 SCT</small></div>
-            <div class="ramo disponible" id="electivo1">Electivo Especializado <br><small>5 SCT</small></div>
+            <div class="ramo bloqueado" id="energias" data-req="fisica-ap" onclick="aprobar('energias', [])">Energías <br><small>4 SCT</small></div>
+            <div class="ramo bloqueado" id="recursos-nat" data-req="agua,cambio-global" onclick="aprobar('recursos-nat', [])">Manejo recursos nat. <br><small>5 SCT</small></div>
+            <div class="ramo bloqueado" id="proyectos" data-req="economia" onclick="aprobar('proyectos', [])">Formulación de proyectos <br><small>4 SCT</small></div>
+            <div class="ramo bloqueado" id="gestion-pub" data-req="politicas-leg,cambio-global,planificacion" onclick="aprobar('gestion-pub', [])">Gestión pública y privada <br><small>5 SCT</small></div>
+            <div class="ramo bloqueado" id="clinica2b" data-req="clinica2a" onclick="aprobar('clinica2b', [])">Clínica 2B: Intervención plan <br><small>5 SCT</small></div>
+            <div class="ramo disponible" id="cfg" onclick="aprobar('cfg', [])">CFG <br><small>2 SCT</small></div>
+            <div class="ramo disponible" id="electivo1" onclick="aprobar('electivo1', [])">Electivo Especializado <br><small>5 SCT</small></div>
         </div>
     </div>
 
