@@ -1,0 +1,148 @@
+/* ==========================================================================
+   MALLA CURRICULAR INTERACTIVA - ESTILOS INGENIERÍA EN RECURSOS NATURALES
+   Paleta: Rosados y Morados Pastel
+   ========================================================================== */
+
+/* Fuentes y Base */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #fcf6f9; /* Fondo rosa pastel ultra claro */
+    color: #4a354f; /* Texto morado oscuro para buen contraste */
+    padding: 30px 20px;
+    min-height: 100vh;
+}
+
+/* Títulos Principales */
+h1 {
+    text-align: center;
+    color: #6c4675; /* Morado elegante */
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+h2 {
+    text-align: center;
+    color: #a87199; /* Rosado viejo o Lila */
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+
+/* Contenedor de la Malla (Layout en Columnas por Semestre) */
+.malla-container {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(190px, 1fr));
+    gap: 15px;
+    align-items: start;
+    overflow-x: auto;
+    padding-bottom: 20px;
+}
+
+/* Columnas de los Semestres */
+.semestre {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 12px;
+    box-shadow: 0 4px 15px rgba(108, 70, 117, 0.05);
+    border: 1px solid #f3e8f0;
+}
+
+.semestre h3 {
+    text-align: center;
+    color: #fff;
+    background: linear-gradient(135deg, #8a5a8f, #b382ac); /* Degradado de morado a rosado */
+    font-size: 13px;
+    font-weight: 600;
+    padding: 8px 10px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+/* Estilo Base de las Cajitas de Ramos */
+.ramo {
+    background-color: #ffffff;
+    border: 2px solid #e1cedd;
+    color: #5c4461;
+    border-radius: 10px;
+    padding: 14px 10px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 1.4;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+}
+
+.ramo small {
+    display: block;
+    margin-top: 5px;
+    color: #a38ca6;
+    font-weight: 600;
+    font-size: 10px;
+}
+
+/* ESTADO: Ramos Disponibles para cursar/marcar (Rosado Pastel Lindo) */
+.ramo.disponible {
+    background-color: #fff0f6; /* Fondo rosa tierno */
+    border-color: #ffc9db;
+    color: #ad3b66;
+}
+
+.ramo.disponible:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 12px rgba(255, 138, 174, 0.25);
+    background-color: #ffe3ee;
+    border-color: #ffb3cd;
+}
+
+/* ESTADO: Ramos Bloqueados por prerrequisito (Gris Morado Apagado) */
+.ramo.bloqueado {
+    background-color: #f1edf2;
+    border-color: #decfe0;
+    color: #a698a8;
+    cursor: not-allowed;
+    opacity: 0.65;
+}
+
+/* ESTADO: Ramos Aprobados (Morado con texto tachado) */
+.ramo.aprobado {
+    background-color: #eaddf2; /* Fondo lila suave */
+    border-color: #ba94d1;
+    color: #5b2c70;
+    text-decoration: line-through;
+    font-weight: 400;
+    box-shadow: inset 0 2px 6px rgba(108, 70, 117, 0.08);
+}
+
+.ramo.aprobado small {
+    text-decoration: none; /* Que los créditos SCT no se tachen */
+    display: block;
+    color: #7b588c;
+}
+
+/* Barra de scroll personalizada (para que combine) */
+.malla-container::-webkit-scrollbar {
+    height: 8px;
+}
+.malla-container::-webkit-scrollbar-track {
+    background: #f1edf2;
+    border-radius: 10px;
+}
+.malla-container::-webkit-scrollbar-thumb {
+    background: #cbb4d4;
+    border-radius: 10px;
+}
+.malla-container::-webkit-scrollbar-thumb:hover {
+    background: #b397c2;
+}
