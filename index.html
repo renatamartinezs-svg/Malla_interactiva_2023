@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malla Curricular Interactiva</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Malla Curricular Interactiva</h1>
+            <p>Haz clic en los ramos para marcarlos como aprobados</p>
+            <button id="resetBtn" class="reset-btn">Reiniciar</button>
+        </header>
+
+        <div class="malla-container">
+            <!-- CICLO BÁSICO -->
+            <div class="ciclo">
+                <h2>Ciclo Básico</h2>
+                
+                <div class="semestre" data-semestre="1">
+                    <h3>Semestre I</h3>
+                    <div class="ramos">
+                        <div class="ramo" data-id="Geomorfología y paisaje" data-sct="5" data-prerequisites="[]" data-unlocks="['Corita']">
+                            <span class="nombre">Geomorfología y paisaje</span>
+                            <span class="sct">5 SCT</span>
+                        </div>
+                        <div class="ramo" data-id="Matemáticas I" data-sct="5" data-prerequisites="[]" data-unlocks="['Matemáticas II','Física']">
+                            <span class="nombre">Matemáticas I</span>
+                            <span class="sct">5 SCT</span>
+                        </div>
+                        <div class="ramo" data-id="Química" data-sct="5" data-prerequisites="[]" data-unlocks="['Biogeoquímica']">
+                            <span class="nombre">Química</span>
+                            <span class="sct">5 SCT</span>
+                        </div>
+                        <div class="ramo" data-id="Diversidad biológica" data-sct="5" data-prerequisites="[]" data-unlocks="['Ecología']">
+                            <span class="nombre">Diversidad biológica</span>
+                            <span class="sct">5 SCT</span>
+                        </div>
+                        <div class="ramo" data-id="Clínica 1" data-sct="5" data-prerequisites="[]" data-unlocks="['Clínica 1A: Bases para el diagnóstico en comunidades humanas']">
+                            <span class="nombre">Clínica 1</span>
+                            <span class="sct">5 SCT</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="semestre" data-semestre="2">
+                    <h3>Semestre II</h3>
+                    <div class="ramos">
+                        <div class="ramo" data-id="Corita" data-sct="2" data-prerequisites="['Geomorfología y paisaje']" data-unlocks="[]">
+                            <span class="nombre">Corita</span>
+                            <span class="sct">2 SCT</span>
+                        </div>
+                        <div class="ramo" data-id="Comprensión del medio social" data-sct="4" data-prerequisites="['Geomorfología y paisaje']" data-unlocks="['Comprensión del sistema cultural']">
+                            <span class="nombre">Comprensión del medio social</span>
+                            <span class="sct">4 SCT</span>
+                        </div>
+                        <div class="ramo" data-id="Matemáticas II" data-sct="5" data-prerequisites="['Matemáticas I']" data-unlocks="['Matemáticas III','Estadística I']">
+                            <span class="nombre">Matemáticas II</span>
+                            <span class="sct">5 SCT</span>
+                        </div>
+                        <div class="ramo" data-id="Física" data-sct="5" data-prerequisites="['Matemáticas I']" data-unlocks="['Física aplicada','Edafología']">
+                            <span class="nombre">Física</span>
+                            <span class="sct">5 SCT</span>
+                        </div>
+                        <div class="ramo" data-id="Biogeoquímica" data-sct="5" data-prerequisites="['Química']" data-unlocks="['Ecología','Química ambiental']">
+                            <span class="nombre">Biogeoquímica</span>
+                            <span class="sct">5 SCT</span>
+                        </div>
+                        <div class="ramo" data-id="Ecofisiología" data-sct="5" data-prerequisites="[]" data-unlocks="[]">
+                            <span class="nombre">Ecofisiología</span>
+                            <span class="sct">5 SCT</span>
+                        </div>
+                        <div class="ramo" data-id="Clínica 1A: Bases para el diagnóstico en comunidades humanas" data-sct="5" data-prerequisites="['Clínica 1']" data-unlocks="['Clínica 1B: Procedimientos para el diagnóstico cualitativo y cuantitativo del sistema territorial']">
+                            <span class="nombre">Clínica 1A: Bases diagnóstico</span>
+                            <span class="sct">5 SCT</span>
+                        </div>
+                        <div class="ramo" data-id="Libre" data-sct="2" data-prerequisites="[]" data-unlocks="[]">
+                            <span class="nombre">Libre</span>
+                            <span class="sct">2 SCT</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="semestre" data-semestre="3">
+                    <h3>Semestre III</h3>
+                    <div class="ramos">
+                        <div class="ramo" data-id="Comprensión del sistema cultural" data-sct="4" data-prerequisites="['Comprensión del medio social']" data-unlocks="['Comprensión del medio ambiente']">
+                            <span class="nombre">Comprensión del sistema cultural</span>
+                            <span class="sct">4 SCT</span>
+                        </div>
+                        <div class="ramo" data-id="Matemáticas III" data-sct="5" data-prerequisites="['Matemáticas II']" data-unlocks="['Física aplicada']">
+                            <span class="nombre">Matemáticas III</span>
+                            <span class="sct">5 SCT</span>
+                        </div>
+                        <div class="ramo" data-id="Ecología" data-sct="4" data-prerequisites="['Diversidad biológica','Biogeoquímica']" data-unlocks="['Comprensión del medio ambiente']">
+                            <span class="nombre">Ecología</span>
+                            <span class="sct">4 SCT</span>
+                        </div>
+                        <div class="ramo" data-id="Estadística I" data-sct="5" data-prerequisites="['Matemáticas II']" data-unlocks="['Estadística II','Geoinformática']">
+                            <span class="nombre">Estadística I</span>
+                            <span class="sct">5 SCT</span>
+                        </div>
+                        <div class="ramo" data-id="Informática ambiental" data-sct="4" data-prerequisites="[]" data-unlocks="['Geoinformática']">
+                            <span class="nombre">Informática ambiental</span>
+                            <span class="sct">4 SCT</span>
+                        </div>
+                        <div class="ramo" data-id="Clínica 1B: Procedimientos para el diagnóstico cualitativo y cuantitativo del sistema territorial" data-sct="5" data-prerequisites="['Clínica 1A: Bases para el diagnóstico en comunidades humanas']" data-unlocks="['Clínica 1C: Planificación de una intervención territorial: diagnóstico']">
+                            <span class="nombre">Clínica 1B: Procedimientos</span>
+                            <span class="sct">5 SCT</span>
+                        </div>
+                        <div class="ramo" data-id="Inglés I" data-sct="3" data-prerequisites="[]" data-unlocks="['Inglés II']">
+                            <span class="nombre">Inglés I</span>
+                            <span class="sct">3 SCT</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="semestre" data-semestre="4">
+                    <h3>Semestre IV</h3>
+                    <div class="ramos">
+                        <div class="ramo" data-id="Economía y desarrollo territorial" data-sct="4" data-prerequisites="[]" data-unlocks="['Economía política','Formulación y evaluación de proyectos']">
+                            <span class="nombre">Economía y desarrollo territorial</span>
+                            <span class="sct">4 SCT</span>
+                        </div>
+                        <div class="ramo" data-id="Física aplicada" data-sct="5" data-prerequisites="['Física','Matemáticas III']" data-unlocks="['Percepción remota','Modelación ambiental','Energías']">
+                            <span class="nombre">Física aplicada</span>
+                            <span class="sct">5 SCT</span>
+                        </div>
+                        <div class="ramo" data-id="Estadística II" data-sct="4" data-prerequisites="['Estadística I']" data-unlocks="['Modelación ambiental']">
+                            <span class="nombre">Estadística II</span>
+                            <span class="sct">4 SCT</span>
+                        </div>
+                        <div class="ramo" data-id="Geoinformática" data-sct="5" data-prerequisites="['Estadística I','Informática ambiental']" data-unlocks="['Percepción remota','Modelación ambiental','Gestión del agua']">
+                            <span class="nombre">Geoinformática</span>
+                            <span class="sct">5 SCT</span>
+                        </div>
+                        <div class="ramo" data-id="Edafología" data-sct="4" data-prerequisites="['Física']" data-unlocks="[]">
+                            <span class="nombre">Edafología</span>
+                            <span class="sct">4 SCT</span>
+                        </div>
+                        <div class="ramo" data-id="Clínica 1C: Planificación de una intervención territorial: diagnóstico" data-sct="5" data-prerequisites="['Clínica 1B: Procedimientos para el diagnóstico cualitativo y cuantitativo del sistema territorial']" data-unlocks="['Clínica 1D: Planificación de una intervención territorial: estrategia']">
+                            <span class="nombre">Clínica 1C: Planificación</span>
+                            <span class="sct">5 SCT</span>
+                        </div>
+                        <div class="ramo" data-id="Inglés II" data-sct="3" data-prerequisites="['Inglés I']" data-unlocks="['Inglés III']">
+                            <span class="nombre">Inglés II</span>
+                            <span class="sct">3 SCT</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CICLO ESPECIALIZADO -->
+            <div class="ciclo">
+                <h2>Ciclo Especializado</h2>
+                
+                <div class="semestre" data-semestre="5">
+                    <h3>Semestre V</h3>
+                    <div class="ramos">
+                        <div class="ramo" data-id="Economía política" data-sct="4" data-prerequisites="['Economía y desarrollo territorial']" data-unlocks="[]">
+                            <span class="nombre">Economía política</span>
+                            <span class="sct">4 SCT</span>
+                        </div>
+                        <div class="ramo" data-id="Percepción remota" data-sct="5" data-prerequisites="['Física aplicada','Geoinformática']" data-unlocks="[]">
+                            <span class="nombre">Percepción remota</span>
+                            <span class="sct">5 SCT</span>
+                        </div>
+                        <div class="ramo" data-id="Modelación ambiental" data-sct="5" data-prerequisites="['Física aplicada','Estadística II','Geoinformática']" data-unlocks="[]">
+                            <span class="nombre">Modelación ambiental</span>
+                            <span class="sct">5 SCT</span>
+                        </div>
+                        <div class="ramo" data-id="Química ambiental" data-sct="4" data-prerequisites="['Biogeoquímica']" data-unlocks="[]">
+                            <span class="nombre">Química ambiental</span>
+                            <span class="sct">4 SCT</span>
+                        </div>
+                        <div class="ramo" data-id="Comprensión del medio ambiente" data-sct="4" data-prerequisites="['Ecología']" data-unlocks="['Cambio global','Planificación estratégica y ordenamiento territorial']">
+                            <span class="nombre">Comprensión del medio ambiente</span>
+                            <span class="sct">4 SCT</span>
+                        </div>
+                        <div class="ramo" data-id="Clínica 1D: Planificación de una intervención territorial: estrategia" data-sct="5" data-prerequisites="['Clínica 1C: Planificación de una intervención territorial: diagnóstico']" data-unlocks="['Clínica 2A: Intervención para el cambio en un territorio de alta complejidad: el diagnóstico']">
+                            <span class="nombre">Clínica 1D: Estrategia</span>
+                            <span class="sct">5 SCT</span>
+                        </div>
+                        <div class="ramo" data-id="Inglés III" data-sct="3" data-prerequisites="['Inglés II']" data-unlocks="['Inglés IV']">
+                            <span class="nombre">Inglés III</span>
+                            <span class="sct">3 SCT</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="semestre" data-semestre="6">
+                    <h3>Semestre VI</h3>
+                    <div class="ramos">
+                        <div class="ramo" data-id="Gestión del agua" data-sct="5" data-prerequisites="['Geoinformática']" data-unlocks="['Manejo de recursos naturales renovables']">
+                            <span class="nombre">Gestión del agua</span>
+                            <span class="sct">5 SCT</span>
+                        </div>
+                        <div class="ramo" data-id="Políticas y legislación ambiental" data-sct="4" data-prerequisites="[]" data-unlocks="['Gestión pública y privada para manejo ambiental']">
+                            <span class="nombre">Políticas y legislación ambiental</span>
+                            <span class="sct">4 SCT</span>
+                        </div>
+                        <div class="ramo" data-id="Cambio global" data-sct="4" data-prerequisites="['Comprensión del medio ambiente']" data-unlocks="['Gestión pública y privada para manejo ambiental','Manejo de recursos naturales renovables']">
+                            <span class="nombre">Cambio global</span>
+                            <span class="sct">4 SCT</span>
+                        </div>
+                        <div class="ramo" data-id="Sistemas socioecológicos" data-sct="4" data-prerequisites="['Comprensión del medio ambiente']" data-unlocks="[]">
+                            <span class="nombre">Sistemas socioecológicos</span>
+                            <span class="sct">4 SCT</span>
+                        </div>
+                        <div class="ramo" data-id="Planificación estratégica y ordenamiento territorial" data-sct="5" data-prerequisites="['Comprensión del medio ambiente']" data-unlocks="['Gestión pública y privada para manejo ambiental']">
+                            <span class="nombre">Planificación estratégica</span>
+                            <span class="sct">5 SCT</span>
+                        </div>
+                        <div class="ramo" data-id="Clínica 2A: Intervención para el cambio en un territorio de alta complejidad: el diagnóstico" data-sct="5" data-prerequisites="['Clínica 1D: Planificación de una intervención territorial: estrategia']" data-unlocks="['Clínica 2B: Intervención para el cambio en un territorio de alta complejidad: el plan estratégico']">
+                            <span class="nombre">Clínica 2A: Diagnóstico</span>
+                            <span class="sct">5 SCT</span>
+                        </div>
+                        <div class="ramo" data-id="Ingl
+
